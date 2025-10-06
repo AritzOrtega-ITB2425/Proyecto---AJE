@@ -1,6 +1,7 @@
 AP Projecte ASIXc2Codi en PHP
 
 *** Estructura del projecte i codi a desplegar ***
+
 app/
  ├── db.php         (connexió a la BBDD)
  ├── index.php      (llista usuaris + formulari per afegir-ne)
@@ -8,8 +9,8 @@ app/
  ├── delete.php     (elimina usuari)
  └── edit.php       (edita usuari)
 
-
 *** DB.PHP ***
+
 <?php
 $servername = "localhost"; // Corregido error ortográfico ("locahost" -> "localhost")
 $username = "root";
@@ -36,6 +37,7 @@ CREATE TABLE users (
 );
 
 *** INDEX.PHP ***
+
 <?php include 'db.php'; ?> 
 <!DOCTYPE html>
 <html lang="ca">
@@ -81,8 +83,8 @@ CREATE TABLE users (
 </body>
 </html>
 
-
 *** ADD.PHP *** 
+
 <?php
 include 'db.php';
 
@@ -171,7 +173,6 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
 </body>
 </html>
 <?php endif; ?>
-
 
 *** DELETE.PHP ***
 
