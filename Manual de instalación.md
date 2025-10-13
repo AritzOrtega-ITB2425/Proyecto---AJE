@@ -11,19 +11,19 @@ Maquina creada con IsardVDI
 En isard vdi, escogemos la maquina ubuntu server  
 ![](./img/unnamed.png)  
 A la máquina le asignamos la tarjeta de red ITB-8, ya que somos el grupo 8, para poder vernos entre nosotros.  
-![][image2]
-
+![](./img/unnamed1.png)
 ## **Creación de la Máquina Virtual**
 
 Con la maquina ya creada, configuramos las tarjetas de red para que tengan comunicación entre ambas máquinas  
 (antes de editar el archivo, descargamos nano con **sudo apt install nano**, ya que no venía instalado)  
-![][image3]
+![](./img/unnamed2.png)
 
 ## **Configuración del Sistema Operativo**
 
 Primero que todo, para configurar hacemos un **sudo apt update** para actualizar los paquetes  
-![][image4] Para el servidor web usaremos **Apache 2**, así que instalamos los servicios de **apache2**  
-![][image5]  
+![](./img/unnamed3.png) Para el servidor web usaremos **Apache 2**, así que instalamos los servicios de **apache2**  
+![](./img/unnamed4.png)
+  
 Comprobamos que esté funcionando correctamente  
 ![][image6]  
 También instalaremos ufw para tener seguridad  
