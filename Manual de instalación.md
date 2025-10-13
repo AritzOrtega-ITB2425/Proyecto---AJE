@@ -73,38 +73,38 @@ Y vemos como hemos podido acceder correctamente.
 
 **Cliente:**
 
-| ![][image17] |
+| ![](./img/unnamed16.png) |
 | :---- |
 
 **Sudo apt update** a cada una de las máquinas para actualizar los repositorios.
 
-| Servidor ![][image18] |
+| Servidor ![](./img/unnamed17.png) |
 | :---- |
-| **Cliente ![][image19]** |
+| **Cliente ![](./img/unnamed18.png)** |
 
 **Sudo apt upgrade** 
 
-| Servidor ![][image20] |
+| Servidor ![](./img/unnamed19.png) |
 | :---- |
-| **Cliente ![][image21]** |
+| **Cliente ![](./img/unnamed20.png)** |
 
 **Configuración netplan**
 
 **Servidor**
 
-| Archivo netplan (/etc/netplan/\*): ![][image22] ip a: ![][image23] |
+| Archivo netplan (/etc/netplan/\*): ![](./img/unnamed21.png) ip a: ![](./img/unnamed22.png) |
 | :---- |
 
 **Cliente**
 
-| Configuración de red: ![][image24] ip a: ![][image25] |
+| Configuración de red: ![](./img/unnamed23.png) ip a: ![](./img/unnamed24.png) |
 | :---- |
 
 **Instalación del servicio BBDD (MariaDB)**
 
 **Líneas de  comando en el servidor**
 
-| sudo apt-key adv \--fetch-keys 'https://mariadb.org/mariadb\_release\_signing\_key.asc' ![][image26] sudo add-apt-repository 'deb \[arch=amd64,arm64,ppc64el\] http://mirror.23media.com/mariadb/repo/10.7/ubuntu jammy main' ![][image27] sudo apt update (nuevamente) ![][image28] sudo apt-get install mariadb-server ![][image29] sudo systemctl status mariadb (comprobar que se ha instalado correctamente) ![][image30] Hacemos el servicio seguro sudo mysql\_secure\_installation ![][image31] Una vez instalado y seguro, vamos a configurarlo para el servidor web sudo nano /etc/mysql/mariadb.conf.d/50-server.cnf ![][image32] (líneas que deben haber)  Reiniciamos el servicio sudo systemctl restart mariadb ![][image33] Iniciamos sesión en mariadb con el usuario root sudo mysql \-u root \-p ![][image34] Creamos una nueva base de datos y un nuevo usuario para el sitio web CREATE DATABASE AJE; CREATE USER 'myuser'@'localhost' IDENTIFIED BY 'mypassword'; GRANT ALL PRIVILEGES ON mydatabase.\* TO 'myuser'@'localhost'; FLUSH PRIVILEGES; ( Base de datos: AJE Usuario: admin Contraseña: pirineus ) ![][image35] Creacion de un usuario admin para el servidor web CREATE USER 'miusuario'@'192.168.8.X' IDENTIFIED BY 'miclave'; GRANT ALL PRIVILEGES ON mibasededatos.\* TO 'miusuario'@'192.168.8.X'; FLUSH PRIVILEGES; ![][image36] |
+| sudo apt-key adv \--fetch-keys 'https://mariadb.org/mariadb\_release\_signing\_key.asc' ![](./img/unnamed25.png) sudo add-apt-repository 'deb \[arch=amd64,arm64,ppc64el\] http://mirror.23media.com/mariadb/repo/10.7/ubuntu jammy main' ![](./img/unnamed26.png) sudo apt update (nuevamente) ![](./img/unnamed27.png) sudo apt-get install mariadb-server ![](./img/unnamed28.png) sudo systemctl status mariadb (comprobar que se ha instalado correctamente) ![](./img/unnamed29.png) Hacemos el servicio seguro sudo mysql\_secure\_installation ![](./img/unnamed30.png) Una vez instalado y seguro, vamos a configurarlo para el servidor web sudo nano /etc/mysql/mariadb.conf.d/50-server.cnf ![](./img/unnamed31.png) (líneas que deben haber)  Reiniciamos el servicio sudo systemctl restart mariadb ![](./img/unnamed32.png) Iniciamos sesión en mariadb con el usuario root sudo mysql \-u root \-p ![](./img/unnamed33.png) Creamos una nueva base de datos y un nuevo usuario para el sitio web CREATE DATABASE AJE; CREATE USER 'myuser'@'localhost' IDENTIFIED BY 'mypassword'; GRANT ALL PRIVILEGES ON mydatabase.\* TO 'myuser'@'localhost'; FLUSH PRIVILEGES; ( Base de datos: AJE Usuario: admin Contraseña: pirineus ) ![](./img/unnamed34.png) Creacion de un usuario admin para el servidor web CREATE USER 'miusuario'@'192.168.8.X' IDENTIFIED BY 'miclave'; GRANT ALL PRIVILEGES ON mibasededatos.\* TO 'miusuario'@'192.168.8.X'; FLUSH PRIVILEGES; ![](./img/unnamed35.png) |
 | :---- |
 
 | IP |  |
