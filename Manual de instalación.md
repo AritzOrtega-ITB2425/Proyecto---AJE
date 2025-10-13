@@ -104,7 +104,27 @@ Y vemos como hemos podido acceder correctamente.
 
 **Líneas de  comando en el servidor**
 
-| sudo apt-key adv \--fetch-keys 'https://mariadb.org/mariadb\_release\_signing\_key.asc' ![](./img/unnamed25.png) sudo add-apt-repository 'deb \[arch=amd64,arm64,ppc64el\] http://mirror.23media.com/mariadb/repo/10.7/ubuntu jammy main' ![](./img/unnamed26.png) sudo apt update (nuevamente) ![](./img/unnamed27.png) sudo apt-get install mariadb-server ![](./img/unnamed28.png) sudo systemctl status mariadb (comprobar que se ha instalado correctamente) ![](./img/unnamed29.png) Hacemos el servicio seguro sudo mysql\_secure\_installation ![](./img/unnamed30.png) Una vez instalado y seguro, vamos a configurarlo para el servidor web sudo nano /etc/mysql/mariadb.conf.d/50-server.cnf ![](./img/unnamed31.png) (líneas que deben haber)  Reiniciamos el servicio sudo systemctl restart mariadb ![](./img/unnamed32.png) Iniciamos sesión en mariadb con el usuario root sudo mysql \-u root \-p ![](./img/unnamed33.png) Creamos una nueva base de datos y un nuevo usuario para el sitio web CREATE DATABASE AJE; CREATE USER 'myuser'@'localhost' IDENTIFIED BY 'mypassword'; GRANT ALL PRIVILEGES ON mydatabase.\* TO 'myuser'@'localhost'; FLUSH PRIVILEGES; ( Base de datos: AJE Usuario: admin Contraseña: pirineus ) ![](./img/unnamed34.png) Creacion de un usuario admin para el servidor web CREATE USER 'miusuario'@'192.168.8.X' IDENTIFIED BY 'miclave'; GRANT ALL PRIVILEGES ON mibasededatos.\* TO 'miusuario'@'192.168.8.X'; FLUSH PRIVILEGES; ![](./img/unnamed35.png) |
+| sudo apt-key adv \--fetch-keys 'https://mariadb.org/mariadb\_release\_signing\_key.asc' 
+![](./img/unnamed25.png) 
+sudo add-apt-repository 'deb \[arch=amd64,arm64,ppc64el\] http://mirror.23media.com/mariadb/repo/10.7/ubuntu jammy main' 
+![](./img/unnamed26.png) 
+sudo apt update (nuevamente) 
+![](./img/unnamed27.png)
+sudo apt-get install mariadb-server
+![](./img/unnamed28.png)
+sudo systemctl status mariadb (comprobar que se ha instalado correctamente) 
+![](./img/unnamed29.png)
+Hacemos el servicio seguro sudo mysql\_secure\_installation 
+![](./img/unnamed30.png) 
+Una vez instalado y seguro, vamos a configurarlo para el servidor web sudo nano /etc/mysql/mariadb.conf.d/50-server.cnf 
+![](./img/unnamed31.png) 
+(líneas que deben haber)  Reiniciamos el servicio sudo systemctl restart mariadb 
+![](./img/unnamed32.png)
+Iniciamos sesión en mariadb con el usuario root sudo mysql \-u root \-p 
+![](./img/unnamed33.png) 
+Creamos una nueva base de datos y un nuevo usuario para el sitio web CREATE DATABASE AJE; CREATE USER 'myuser'@'localhost' IDENTIFIED BY 'mypassword'; GRANT ALL PRIVILEGES ON mydatabase.\* TO 'myuser'@'localhost'; FLUSH PRIVILEGES; ( Base de datos: AJE Usuario: admin Contraseña: pirineus ) 
+![](./img/unnamed34.png) 
+Creacion de un usuario admin para el servidor web CREATE USER 'miusuario'@'192.168.8.X' IDENTIFIED BY 'miclave'; GRANT ALL PRIVILEGES ON mibasededatos.\* TO 'miusuario'@'192.168.8.X'; FLUSH PRIVILEGES; ![](./img/unnamed35.png) |
 | :---- |
 
 | IP |  |
