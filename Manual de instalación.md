@@ -9,7 +9,7 @@ Maquina creada con IsardVDI
 ## **Planificación y Preparación:**
 
 En isard vdi, escogemos la maquina ubuntu server  
-![][image1]  
+![](./img/unnamed.png)  
 A la máquina le asignamos la tarjeta de red ITB-8, ya que somos el grupo 8, para poder vernos entre nosotros.  
 ![][image2]
 
