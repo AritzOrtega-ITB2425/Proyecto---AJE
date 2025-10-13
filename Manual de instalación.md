@@ -20,39 +20,40 @@ Con la maquina ya creada, configuramos las tarjetas de red para que tengan comun
 ## **Configuración del Sistema Operativo**
 
 Primero que todo, para configurar hacemos un **sudo apt update** para actualizar los paquetes  
-![](./img/unnamed3.png) Para el servidor web usaremos **Apache 2**, así que instalamos los servicios de **apache2**  
+![](./img/unnamed3.png) 
+Para el servidor web usaremos **Apache 2**, así que instalamos los servicios de **apache2**  
 ![](./img/unnamed4.png)
   
 Comprobamos que esté funcionando correctamente  
-![][image6]  
+![](./img/unnamed5.png)  
 También instalaremos ufw para tener seguridad  
-![][image7]  
+![](./img/unnamed6.png)  
 Y le aplicaremos las reglas para que acepte los puertos de apache  
-![][image8]  
+![](./img/unnamed7.png)  
 Revisamos  
-![][image9]
+![](./img/unnamed8.png)
 
 ## **Instalación del Servidor Web**
 
 Con el servidor web instalado, vamos a editar la pagina index.html, primero vamos a poner el actual en modo backup  
-![][image10]  
+![](./img/unnamed9.png)  
 Y crearemos el nuestro propio, index.html, en el que añadiremos el siguiente codigo  
-![][image11]  
+![](./img/unnamed10.png)  
 Ahora hacemos un curl localhost para ver que se haya editado correctamente  
-![][image12]
+![](./img/unnamed11.png)
 
 ## **Configuración de Red y Acceso Externo**
 
 Con el firewall ya activo, vamos a comprobar que las reglas y la web funcionan correctamente, intentando acceder desde otro dispositivo (cliente Ubuntu)  
-![][image13]
+![](./img/unnamed12.png)
 
 **CLIENTE**
 
 Para el cliente simplemente tenemos que configurar la tarjeta de red ya que no vamos a instalar nada en ella.  
-![][image14]
+![](./img/unnamed13.png)
 
 Aplicamos configuración manual, y ahora probamos de acceder al servidor web  
-![][image15]  
+![](./img/unnamed14.png)  
 Y vemos como hemos podido acceder correctamente.
 
 | Máquina | IP |
@@ -67,7 +68,7 @@ Y vemos como hemos podido acceder correctamente.
 **Especificaciones de la máquina virtual:**  
 **Servidor:**
 
-| ![][image16] |
+| ![](./img/unnamed15.png) |
 | :---- |
 
 **Cliente:**
