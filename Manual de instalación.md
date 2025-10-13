@@ -11,8 +11,7 @@ Maquina creada con IsardVDI
 En isard vdi, escogemos la maquina ubuntu server  
 ![](./img/unnamed.png)  
 A la máquina le asignamos la tarjeta de red ITB-8, ya que somos el grupo 8, para poder vernos entre nosotros.  
-![](./img/unnamed1.png)
-## **Creación de la Máquina Virtual**
+![](./img/unnamed.png2)## **Creación de la Máquina Virtual**
 
 Con la maquina ya creada, configuramos las tarjetas de red para que tengan comunicación entre ambas máquinas  
 (antes de editar el archivo, descargamos nano con **sudo apt install nano**, ya que no venía instalado)  
