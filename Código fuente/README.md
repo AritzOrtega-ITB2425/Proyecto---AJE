@@ -5,3 +5,5 @@ app/
 - add.php        (afegeix usuari)
 - delete.php     (elimina usuari)
 - edit.php       (edita usuari)
+
+codigo_fuente_nuevo (Contiene todo el código fuente corregido)
